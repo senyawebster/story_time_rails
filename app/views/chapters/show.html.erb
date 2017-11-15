@@ -1,0 +1,6 @@
+<% content_for(:sentence, @chapter.sentence) %>
+<% content_for(:author, @chapter.author) %>
+<% content_for(:pic, @chapter.pic) %>
+<h1><%= @chapter.sentence %></h1>
+<h1><%= @chapter.author %></h1>
+<img src="<%= @chapter.pic %>">

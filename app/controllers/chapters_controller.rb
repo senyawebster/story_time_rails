@@ -11,7 +11,6 @@ class ChaptersController < ApplicationController
 
   def show
     @chapter = Chapter.find(params[:id])
-    @lessons = @chapter.lessons
   end
 
   def create
