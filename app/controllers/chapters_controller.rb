@@ -11,6 +11,7 @@ class ChaptersController < ApplicationController
 
   def show
     @chapter = Chapter.find(params[:story_id])
+    @stories = Story.all()
   end
 
   def create

@@ -5,6 +5,9 @@
 <h1><%= @chapter.author %></h1>
 <img src="<%= @chapter.pic %>">
 
+<!-- <button><% @chapter.next %> Next </button>
+<button><% @chapter.prev %> Prev </button> -->
+
 <h2><a href="/stories/
   <% if (@chapter.id - 1) > 1 %>
     <%= @chapter.id - 1 %>
@@ -22,4 +25,4 @@
     /chapters/<%= @chapter.story_id %>">Next</a></h2>
 
 
-<h3> <a href="/stories">Stories</a> </h3>
+<h3><a href="/stories">Stories</a></h3>

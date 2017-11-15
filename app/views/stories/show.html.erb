@@ -11,6 +11,9 @@
   <p>There are no chapters yet!</p>
 <% end %>
 
+<%= link_to "New Chapter", new_story_chapter_path(@story) %>
+
+<%= render "form" %>
 
 <!-- <%= link_to "Delete", story_path(@story),
                                  :data => {:confirm => "Are you sure?",
