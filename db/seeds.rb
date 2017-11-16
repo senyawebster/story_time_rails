@@ -43,7 +43,7 @@ end
   Chapter.create!(sentence: Faker::Hipster.sentence,
                   author: Faker::GameOfThrones.character,
                   pic: 'https://www.dapper.com.au/c082avocado2.jpg',
-                  story_id: rand((Story.first.id)..(Story.first.id+9)))
+                  story_id: Faker::Number.between(Story.first.id, Story.last.id))
 end
 
 p "Created #{Story.count} stories"
