@@ -4,7 +4,7 @@
 <% if @story.chapters.any? %>
   <% @story.chapters.each do |chapter| %>
     <p>
-      <%= link_to chapter.sentence, story_chapter_path(chapter)%>,
+      <%= link_to chapter.sentence, story_chapter_path(@story, chapter)%>,
     </p>
   <% end %>
 <% else %>
@@ -15,6 +15,6 @@
 
 <%= render "form" %>
 
-<!-- <%= link_to "Delete", story_path(@story),
+<%= link_to "Delete", story_path(@story),
                                  :data => {:confirm => "Are you sure?",
-                                                :method => "delete"} %> -->
+                                                    :method => "delete"} %>

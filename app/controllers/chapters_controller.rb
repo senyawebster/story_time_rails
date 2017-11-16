@@ -10,7 +10,7 @@ class ChaptersController < ApplicationController
   end
 
   def show
-    @chapter = Chapter.find(params[:story_id])
+    @chapter = Chapter.find(params[:id])
     @stories = Story.all()
   end
 
@@ -20,6 +20,7 @@ class ChaptersController < ApplicationController
     if @chapter.save
       redirect_to story_path(@chapter.story)
     else
+      flash[:notice] = "Sentence length longer than 140 characters"
       render :new
     end
   end

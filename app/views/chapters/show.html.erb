@@ -16,13 +16,27 @@
   <% end %>
   /chapters/<%= @chapter.story_id %>">Previous</a></h2>
 
+  <h2><a href="/stories/ <% @story.id + 1 %> /chapters/ <%= @chapter.id %> ">Next</a></h2>
+
+<!-- <h2><a href="/stories/
+  <% if (@chapter.id - 1) > 1 %>
+    <%= @chapter.id - 1 %>
+  <% else %>
+    1
+  <% end %>
+  /chapters/<%= @chapter.story_id %>">Previous</a></h2>
+
   <h2><a href="/stories/
     <% if @chapter.id + 1 %>
       <%= @chapter.id + 1 %>
     <% else %>
       1
     <% end %>
-    /chapters/<%= @chapter.story_id %>">Next</a></h2>
+    /chapters/<%= @chapter.story_id %>">Next</a></h2> -->
 
 
 <h3><a href="/stories">Stories</a></h3>
+
+<%= link_to "Delete", story_chapter_path(@chapter),
+                                 :data => {:confirm => "Are you sure?",
+                                                    :method => "delete"} %>
